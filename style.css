@@ -88,7 +88,7 @@ color: #E0B612;
     color: #fff;
 }
 .notify {
-    color: #fff;
+    color: white;
     text-align: center;
     margin: 0 auto;
     background: #222436;
@@ -103,4 +103,16 @@ color: #E0B612;
 .action-left {
     color: #FF3C5F;
     margin-top: 10px;
+}
+
+.notify-unmatched {
+
+    display: none;
+    color: white;
+}
+
+.notify-matched {
+
+    display: none;
+    color: white;
 }

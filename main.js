@@ -38,9 +38,9 @@ document.getElementById('generate-btn').addEventListener('click', function () {
 //User Input Section;
 
 
-// function for getting the input value
+// function for getting the user input value
 
-function getInput() {
+function userPin() {
 
     const inputID = document.getElementById('user-input').value;
 
@@ -69,5 +69,25 @@ document.getElementById('keypad').addEventListener('click', function (e) {
         userInputNum = parseInt(inputField.value += e.target.innerText);
     }
 });
+
+
+//Verifying the pin;
+
+
+document.getElementById('pin-submit').addEventListener('click', function () {
+
+    const generatedPin = getPin();
+    const userEntered = userPin();
+
+    if (generatedPin == userEntered) {
+
+        document.querySelector('.notify-matched').style.display = 'block'
+        document.querySelector('.notify-unmatched').style.display = 'none'
+    } else {
+
+        document.querySelector('.notify-unmatched').style.display = 'block'
+        document.querySelector('.notify-matched').style.display = 'none'
+    }
+})
 
 
