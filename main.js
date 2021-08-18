@@ -15,6 +15,15 @@ function generatePin() {
     }
 }
 
+//Getting the generated pin;
+
+function getPin() {
+
+    const pinText = document.getElementById('generated-pin').value;
+    const pinNum = parseInt(pinText);
+
+    return pinNum;
+}
 
 // Event handler for generating pin button;
 
@@ -29,5 +38,36 @@ document.getElementById('generate-btn').addEventListener('click', function () {
 //User Input Section;
 
 
+// function for getting the input value
+
+function getInput() {
+
+    const inputID = document.getElementById('user-input').value;
+
+    const inputNumber = parseInt(inputID);
+
+    return inputNumber;
+}
+
+//Event handler for keypad numbers;
+
+
+document.getElementById('keypad').addEventListener('click', function (e) {
+
+    let inputField = document.getElementById('user-input');
+    let userInputNum;
+
+    if (isNaN(e.target.innerText)) {
+
+        if (e.target.innerText == 'C') {
+
+            inputField.value = '';
+        } else if (e.target.innerText == '<') {
+            console.log('I don\'t know the solution')
+        }
+    } else {
+        userInputNum = parseInt(inputField.value += e.target.innerText);
+    }
+});
 
 
